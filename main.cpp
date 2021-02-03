@@ -21,29 +21,22 @@ int main(){
         do{
             cout << "Nomor Buku\t: ";
             cin >> nomor_buku;
-
-            switch (nomor_buku){
-            case 1:
+            
+            if (nomor_buku == 1){
                 harga_buku = 80000;
                 jdl_buku = "Bumi Manusia";
-                break;
-            case 2:
+            }else if(nomor_buku == 2){
                 harga_buku = 90000;
                 jdl_buku = "Anak semua Bangsa";
-                break;
-            case 3:
+            }else if (nomor_buku == 3){
                 harga_buku = 120000;
                 jdl_buku = "Rumah kaca";
-                break;
-            case 4:
+            }else if (nomor_buku == 4){
                 harga_buku = 210000;
                 jdl_buku = "Naga Bumi";
-                break;
-            
-            default:
+            }else{
                 cout << "WARNING!, Buku tidak tersedia" << endl;
             }
-            
         }while(nomor_buku < 1 || nomor_buku > 4);
 
         cout << "Jumlah\t\t: ";
@@ -72,7 +65,7 @@ int main(){
             diskon = total_belanja * 5 / 100;
             total_stlh_diskon = total_belanja - diskon;
             cout << "Diskon (5%)\t: " << diskon << endl;
-            cout << "Total Akhir\t: " << total_stlh_diskon << endl;
+            cout << "Total (%)\t: " << total_stlh_diskon << endl;
         }else if (total_belanja >= 190000){
             diskon = total_belanja * 10 / 100;
             total_stlh_diskon = total_belanja - diskon;
